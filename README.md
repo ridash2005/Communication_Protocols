@@ -23,7 +23,7 @@ Whether you are debugging a sensor, connecting microcontrollers, or designing a 
 Communication protocols are the language of electronics. They allow microcontrollers, sensors, and computers to exchange data. This repository provides:
 - **Theoretical Deep Dives**: How communication signals look on the wire.
 - **Timing Diagrams**: Visualizing data transfer.
-- **Reference Code**: Production-ready implementation examples in **C++ (Arduino)**, **Python**, and **C (STM32 HAL)**.
+- **Reference Code**: Production-ready implementation examples in **C++ (Arduino)**, **Python**, **C (STM32 HAL)**, and **Verilog (FPGA)**.
 - **Best Practices**: Impedance matching, pull-up resistors, and noise handling.
 
 ---
@@ -71,18 +71,21 @@ Communication_Protocols/
 │   └── 📂 examples/      #    Implementation logic
 │       ├── 📂 arduino/   #    C++ examples (Simple)
 │       ├── 📂 stm32/     #    C HAL examples (Professional)
+│       ├── 📂 fpga/      #    Verilog modules (Digital Logic)
 │       └── 📂 python/    #    Host-side scripts
 ├── 📂 SPI/               # 2️⃣ Serial Peripheral Interface
 │   ├── README.md
 │   └── 📂 examples/
 │       ├── 📂 arduino/
 │       ├── 📂 stm32/
+│       ├── 📂 fpga/
 │       └── 📂 python/
 ├── 📂 I2C/               # 3️⃣ Inter-Integrated Circuit
 │   ├── README.md
 │   └── 📂 examples/
 │       ├── 📂 arduino/
 │       ├── 📂 stm32/
+│       ├── 📂 fpga/
 │       └── 📂 python/
 └── 📂 docs/              # 📚 References, Pinouts, and Cheat Sheets
 ```
@@ -96,6 +99,7 @@ Communication_Protocols/
 3.  **Run the Code**:
     *   **Arduino**: Open the `.ino` files in the Arduino IDE and flash to your board (Uno, Nano, ESP32, etc.).
     *   **STM32**: Create a new project in STM32CubeMX matching the configuration described in the `main.c` header, then copy the user code logic.
+    *   **FPGA**: Import the `.v` files into Vivado, Quartus, or ModelSim for simulation/synthesis.
     *   **Python**: Install [PySerial](https://pypi.org/project/pyserial/) or required libraries and run the scripts on your PC or Raspberry Pi.
 
 ---
