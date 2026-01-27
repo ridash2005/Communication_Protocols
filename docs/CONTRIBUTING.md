@@ -29,9 +29,31 @@ We want this to be the best open-source resource for embedded communication prot
 *   Include diagrams (ASCII or images) where possible.
 *   Check spelling and grammar.
 
-## 💡 Types of Contributions
-*   **New Protocols**: CAN, RS-485, USB, Ethernet, Modbus.
-*   **New Platforms**: STM32 HAL examples, ESP-IDF, PIC.
-*   **Corrections**: Typos, incorrect diagrams, or code bugs.
+## 🚧 Roadmap & Help Wanted
+
+We are looking for contributions in the following areas. If you want to work on one of these, please check the Issues tab to avoid duplication!
+
+### 1. 📡 Missing Protocols
+We need comprehensive guides and examples for:
+*   **CAN Bus (Controller Area Network)**: Essential for automotive.
+*   **RS-485**: Robust industrial serial.
+*   **Modbus (RTU & TCP)**: Industrial automation standard.
+*   **1-Wire**: For sensors like DS18B20.
+*   **I2S**: Audio data transmission.
+
+### 2. 💻 New Platforms
+Expand our coverage beyond Arduino/STM32/FPGA:
+*   **ESP32**: implementations using **ESP-IDF** (FreeRTOS based).
+*   **Raspberry Pi Pico (RP2040)**: using the **C/C++ SDK**.
+*   **Rust Embedded**: Examples using `embedded-hal` or `embassy`.
+
+### 3. ⚡ Advanced Features
+*   **DMA & Interrupts**: Current examples are mostly polling-based. We need Non-Blocking (DMA/ISR) examples for STM32 and Arduino.
+*   **Testbenches**: Self-checking SystemVerilog testbenches for the FPGA modules.
+*   **Unit Tests**: Python scripts to validate hardware interactions automatically.
+
+### 4. 📚 Documentation
+*   Add more interactive timing diagrams (WaveDrom).
+*   Translations into other languages.
 
 Happy Coding!
