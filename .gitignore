@@ -1,0 +1,13 @@
+# Simulation Artifacts
+*.vcd
+*_sim
+*.log
+
+# Python Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS Artifacts
+.DS_Store
+Thumbs.db
