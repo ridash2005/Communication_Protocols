@@ -291,7 +291,7 @@ class TestRingBuffer(unittest.TestCase):
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("  Communication Protocols - Python Verification Suite")
+    print("echo  HAL-Zero-Protocols - Full Verification Suite")
     print("=" * 60)
 
     # Run all tests with verbose output

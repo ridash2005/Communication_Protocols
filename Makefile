@@ -1,5 +1,5 @@
 # ============================================================================
-# STM32F4xx Bare-Metal Driver Suite — Makefile
+# STM32F4xx Bare-Metal Driver Suite (HAL-Zero-Protocols) — Makefile
 # ============================================================================
 # Toolchain: ARM GCC (arm-none-eabi-gcc)
 # Target:    STM32F401RE (Cortex-M4F, 512KB Flash, 96KB SRAM)

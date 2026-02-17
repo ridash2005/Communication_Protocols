@@ -1,6 +1,6 @@
-# 📡 Communication Protocols: The Comprehensive Guide
+# 📡 HAL-Zero-Protocols: Bare-Metal Communication Suite
 
-Welcome to the **Communication Protocols** repository. This project serves as a one-stop resource for beginners and professionals looking to understand, implement, and master the fundamental serial communication protocols used in embedded systems and electronics: **UART**, **SPI**, and **I2C**.
+Welcome to the **HAL-Zero-Protocols** repository. This project serves as a comprehensive resource for **Bare-Metal Driver Development**, **Industrial Protocol Stacks**, and **Silicon Verification**. It bridges the gap between educational examples and production-grade firmware for **UART**, **SPI**, **I2C**, **CAN**, and **USB**.
 
 Whether you are debugging a sensor, connecting microcontrollers, or designing a robust system, finding reliable examples and clear theory can be challenging. This repository bridges ease-of-use with professional depth.
 
@@ -13,6 +13,7 @@ Whether you are debugging a sensor, connecting microcontrollers, or designing a 
 - [Comparison Matrix](#-comparison-matrix)
 - [Verification Status](#-verification-status)
 - [Repository Structure](#-repository-structure)
+- [Build & Verification](#-build--verification)
 - [Getting Started](#-getting-started)
 - [Contributing](#-contributing)
 - [Contributor Guidelines](docs/CONTRIBUTING.md)
@@ -113,7 +114,7 @@ This repository is built on three pillars of professional embedded engineering:
 ## 📂 Repository Structure
 
 ```text
-Communication_Protocols/
+HAL-Zero-Protocols/
 ├── 📂 UART/              # 1️⃣ Universal Asynchronous Receiver-Transmitter
 │   ├── README.md         #    Theory, Timing, and Hardware details
 │   └── 📂 examples/      #    Implementation logic
@@ -159,6 +160,44 @@ Communication_Protocols/
 > - **`UART/`, `SPI/`, `I2C/`** — Educational, multi-platform examples (Arduino, STM32 HAL, FPGA, Python) for learning protocol fundamentals.
 > - **`drivers/`** — Production-grade, bare-metal STM32F4xx peripheral drivers written from scratch with zero HAL dependencies. These are what you'd ship in a real product.
 > - **`protocol_stacks/`** — Higher-level protocol implementations (MODBUS, CAN, USB CDC) that build on top of the `drivers/` layer.
+
+---
+
+## 🔨 Build & Verification
+
+This repository is designed to be built and verified with minimal dependencies.
+
+### 1. Prerequisites
+- **ARM GCC Toolchain**: `arm-none-eabi-gcc` (for firmware compilation).
+- **Make**: (Windows: install via `scoop install make` or use Git Bash / MinGW).
+- **Python 3**: For mock verification scripts.
+- **Visual Studio Build Tools** (Windows): Required for compiling host-side C unit tests (`cl.exe`).
+
+### 2. Building Firmware
+To compile the STM32F4xx firmware (drivers + protocol stacks):
+```bash
+make
+```
+This generates `build/firmware.elf`, `.hex`, and `.bin` files ready for flashing.
+
+### 3. Running Verification Suite
+We provide a comprehensive test suite that verifies both the Python prototypes and the C driver logic (host-compiled simulations).
+
+**Windows (cmd/PowerShell):**
+```cmd
+verification\run_verification.bat
+```
+*Note: This script automatically checks for the MSVC compiler (`cl.exe`). If it is not in your PATH, you may need to run this from the "x64 Native Tools Command Prompt for VS 2022" or manually run `vcvarsall.bat` first.*
+
+**Linux/macOS:**
+```bash
+# Run Python tests
+python3 verification/mock_verify.py
+
+# Compile and run C tests
+gcc -std=c11 -DUNIT_TEST -I./drivers/common -I./protocol_stacks/modbus -I./protocol_stacks/usb_cdc -I./protocol_stacks/can_bus verification/test_drivers.c -o test_drivers
+./test_drivers
+```
 
 ---
 
