@@ -61,6 +61,11 @@ graph TD
     
     style SDA_Line stroke:#ff9800,stroke-width:4px
     style SCL_Line stroke:#ff9800,stroke-width:4px
+    style Master fill:#e1f5fe,stroke:#01579b,color:#000000
+    style Slave1 fill:#fff9c4,stroke:#fbc02d,color:#000000
+    style Slave2 fill:#fff9c4,stroke:#fbc02d,color:#000000
+    style VCC fill:#ffebee,stroke:#c62828,color:#000000
+    style GND fill:#212121,stroke:#000000,color:#ffffff
 ```
 
 | Pin | Name | Description |

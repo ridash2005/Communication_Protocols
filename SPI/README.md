@@ -36,8 +36,8 @@ graph LR
     MISO_S -- Data In --> MISO_M
     CS_M -- Chip Select (Active Low) --> CS_S
 
-    style Master fill:#e1f5fe,stroke:#01579b
-    style Slave fill:#fff9c4,stroke:#fbc02d
+    style Master fill:#e1f5fe,stroke:#01579b,color:#000000
+    style Slave fill:#fff9c4,stroke:#fbc02d,color:#000000
     
     style SCK_M stroke:#f00,stroke-width:2px
     style MOSI_M stroke:#0f0,stroke-width:2px

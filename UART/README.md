@@ -34,10 +34,10 @@ graph LR
     TX_B -- Data Flow --> RX_A
     GND_A == Common Ground == GND_B
 
-    style TX_A fill:#ff9999,stroke:#333,stroke-width:2px
-    style RX_B fill:#99ff99,stroke:#333,stroke-width:2px
-    style TX_B fill:#ff9999,stroke:#333,stroke-width:2px
-    style RX_A fill:#99ff99,stroke:#333,stroke-width:2px
+    style TX_A fill:#ff9999,stroke:#333,stroke-width:2px,color:#000000
+    style RX_B fill:#99ff99,stroke:#333,stroke-width:2px,color:#000000
+    style TX_B fill:#ff9999,stroke:#333,stroke-width:2px,color:#000000
+    style RX_A fill:#99ff99,stroke:#333,stroke-width:2px,color:#000000
 ```
 
 | Device A | Connection | Device B |

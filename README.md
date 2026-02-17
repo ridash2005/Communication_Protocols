@@ -36,10 +36,14 @@ graph TD
     E2E --> Docs[Documentation & Maintenance]
     Docs --> Finish([Verified Release])
 
-    style Start fill:#e1f5fe,stroke:#01579b
-    style Finish fill:#e1f5fe,stroke:#01579b
-    style FSM fill:#fff9c4,stroke:#fbc02d
-    style E2E fill:#c8e6c9,stroke:#2e7d32
+    style Start fill:#1565c0,stroke:#0d47a1,color:#ffffff
+    style finish fill:#1565c0,stroke:#0d47a1,color:#ffffff
+    style Spec fill:#e3f2fd,stroke:#1565c0,color:#000000
+    style FSM fill:#fff9c4,stroke:#fbc02d,color:#000000
+    style RTL fill:#f3e5f5,stroke:#7b1fa2,color:#000000
+    style Sim fill:#ffe0b2,stroke:#e65100,color:#000000
+    style E2E fill:#2e7d32,stroke:#1b5e20,color:#ffffff
+    style Docs fill:#e0f2f1,stroke:#00695c,color:#000000
 ```
 
 ## ✅ Verification Status
